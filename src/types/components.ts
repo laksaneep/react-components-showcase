@@ -1,3 +1,4 @@
+import { DIFFICULTIES_LEVEL } from "@/constants";
 import { ComponentType } from "react";
 
 export interface ComponentProp {
@@ -11,12 +12,13 @@ export interface ComponentProp {
 export interface ComponentMetadata {
   title: string;
   description: string;
-  difficulty: "Easy" | "Medium" | "Hard";
+  difficulty: keyof typeof DIFFICULTIES_LEVEL;
   category: string;
   defaultProps?: Record<string, any>;
   props: ComponentProp[];
   sourceCode: string;
-  examples: string;
+  buttonUsageExamples: string;
+  previewExamples?: React.ReactNode;
   tags?: string[];
   version?: string;
   author?: string;

@@ -22,26 +22,26 @@ const Button: React.FC<ButtonProps> = ({
   type = "button",
 }) => {
   const baseClasses =
-    "inline-flex items-center justify-center font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed";
+    "inline-flex items-center justify-center font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-ring disabled:opacity-50 disabled:cursor-not-allowed font-sans";
 
   const variantClasses = {
     primary:
-      "bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white shadow-sm hover:shadow-md focus:ring-blue-500",
+      "bg-primary hover:bg-primary/90 active:bg-primary/80 text-primary-foreground focus:ring-primary",
     secondary:
-      "bg-gray-100 hover:bg-gray-200 active:bg-gray-300 text-gray-900 shadow-sm hover:shadow-md focus:ring-gray-500 border border-gray-300",
+      "bg-secondary hover:bg-secondary/80 active:bg-secondary/60 text-secondary-foreground border border-border focus:ring-secondary",
     danger:
-      "bg-red-600 hover:bg-red-700 active:bg-red-800 text-white shadow-sm hover:shadow-md focus:ring-red-500",
+      "bg-destructive hover:bg-destructive/90 active:bg-destructive/80 text-destructive-foreground focus:ring-destructive",
     outline:
-      "bg-white border-2 border-blue-600 hover:bg-blue-50 active:bg-blue-100 text-blue-600 hover:text-blue-700 focus:ring-blue-500 shadow-sm hover:shadow-md",
+      "bg-background border-2 border-primary hover:bg-accent active:bg-accent/80 text-primary hover:text-primary/90 focus:ring-primary",
   };
 
   const sizeClasses = {
-    small: "px-3 py-1.5 text-sm rounded-md",
-    medium: "px-4 py-2 text-base rounded-lg",
-    large: "px-6 py-3 text-lg rounded-lg",
+    small: `px-3 py-1.5 text-sm rounded-sm`,
+    medium: `px-4 py-2 text-base rounded-md`,
+    large: `px-6 py-3 text-lg rounded-lg`,
   };
 
-  const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
+  const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} shadow-sm ${className}`;
 
   return (
     <button

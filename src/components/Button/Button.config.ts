@@ -1,10 +1,14 @@
 import { ComponentMetadata } from "@/types/components";
+import { DIFFICULTIES_LEVEL } from "../../constants";
 
-export const buttonConfig: Omit<ComponentMetadata, "sourceCode"> = {
-  title: "Custom Button",
+export const buttonConfig: Omit<
+  ComponentMetadata,
+  "sourceCode" | "buttonUsageExamples"
+> = {
+  title: "Button",
   description:
     "A versatile button component with multiple variants, sizes, and loading states built with TypeScript and Tailwind CSS",
-  difficulty: "Easy",
+  difficulty: DIFFICULTIES_LEVEL.EASY as keyof typeof DIFFICULTIES_LEVEL,
   category: "UI Elements",
   defaultProps: {
     children: "Click me!",

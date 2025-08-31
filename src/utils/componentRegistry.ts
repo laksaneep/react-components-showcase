@@ -4,6 +4,7 @@ import {
   ComponentMetadata,
   RegisteredComponent,
 } from "@/types/components";
+import { DIFFICULTIES_LEVEL } from "@/constants";
 
 // Component registry storage
 const componentRegistry: ComponentRegistry = {};
@@ -41,7 +42,7 @@ export const getComponentsByCategory = (
 
 // Get components by difficulty
 export const getComponentsByDifficulty = (
-  difficulty: "Easy" | "Medium" | "Hard"
+  difficulty: keyof typeof DIFFICULTIES_LEVEL
 ): ComponentRegistry => {
   return Object.fromEntries(
     Object.entries(componentRegistry).filter(

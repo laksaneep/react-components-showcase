@@ -1,15 +1,6 @@
-// Import the actual file as raw text
 import buttonRawCode from "./Button.tsx?raw";
 
-// Clean up the imported code (remove imports, exports, etc.)
-export const buttonSourceCode = buttonRawCode
-  .replace(/^import.*$/gm, "") // Remove import lines
-  .replace(/^export\s+(interface|type).*$/gm, "") // Remove export statements
-  .replace(/export default.*$/, "") // Remove export default
-  .trim();
-
-// Or just use the raw code as-is
-export const buttonFullSourceCode = buttonRawCode;
+export const buttonSourceCode = buttonRawCode.trim();
 
 // Additional examples can still be manually written
 export const buttonUsageExamples = `// Basic usage
