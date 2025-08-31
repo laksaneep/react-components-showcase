@@ -26,7 +26,9 @@ const PreviewTabContent = ({
         <strong className="text-foreground">Difficulty:</strong>
         <span
           className={`ml-2 px-2 py-1 rounded text-xs ${
-            DIFFICULTIES_LEVEL_CONFIG[component.difficulty].styles
+            DIFFICULTIES_LEVEL_CONFIG[
+              component.difficulty as keyof typeof DIFFICULTIES_LEVEL_CONFIG
+            ].styles
           }`}
         >
           {component.difficulty}

@@ -157,7 +157,11 @@ const ComponentShowcase = () => {
                             {data.title}
                           </h3>
                           <div className="flex items-center gap-1 flex-shrink-0">
-                            {DIFFICULTIES_LEVEL_CONFIG[data.difficulty].icon}
+                            {
+                              DIFFICULTIES_LEVEL_CONFIG[
+                                data.difficulty as keyof typeof DIFFICULTIES_LEVEL_CONFIG
+                              ].icon
+                            }
                             <span className="text-xs text-muted-foreground whitespace-nowrap hidden sm:inline">
                               {data.difficulty}
                             </span>
