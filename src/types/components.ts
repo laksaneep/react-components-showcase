@@ -17,7 +17,7 @@ export interface ComponentMetadata {
   defaultProps?: Record<string, any>;
   props: ComponentProp[];
   sourceCode: string;
-  buttonUsageExamples: string;
+  usageExamples: string;
   previewExamples?: React.ReactNode;
   tags?: string[];
   version?: string;

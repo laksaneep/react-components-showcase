@@ -3,7 +3,7 @@ import { DIFFICULTIES_LEVEL } from "../../constants";
 
 export const buttonConfig: Omit<
   ComponentMetadata,
-  "sourceCode" | "buttonUsageExamples"
+  "sourceCode" | "usageExamples"
 > = {
   title: "Button",
   description:
