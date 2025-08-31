@@ -10,7 +10,7 @@ export const DIFFICULTIES_LEVEL = {
   EASY: "Easy",
   MEDIUM: "Medium",
   HARD: "Hard",
-};
+} as const;
 
 export const DIFFICULTIES_LEVEL_CONFIG = {
   [DIFFICULTIES_LEVEL.EASY]: {
@@ -26,3 +26,10 @@ export const DIFFICULTIES_LEVEL_CONFIG = {
     styles: "bg-red-100 text-red-700",
   },
 } as const;
+
+export const PROPS_TABS_TABLE_TITLE = [
+  "Name",
+  "Type",
+  "Description",
+  "Default Value",
+] as const;
