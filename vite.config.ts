@@ -5,7 +5,7 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
   assetsInclude: ["**/*.tsx?raw", "**/*.ts?raw"],
-  base: "/react-component-showcase/", // Replace with your repo name
+  base: "/react-components-showcase/",
   build: {
     outDir: "dist",
   },
